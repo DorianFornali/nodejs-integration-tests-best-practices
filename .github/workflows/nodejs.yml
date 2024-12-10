@@ -47,7 +47,6 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'test/')
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js (.nvmrc)
@@ -70,7 +69,6 @@ jobs:
   test_nestjs:
     needs: build
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'nestjs/')
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js (.nvmrc)
@@ -93,7 +91,6 @@ jobs:
   test_mocha:
     needs: build
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'mocha/')
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js (.nvmrc)
